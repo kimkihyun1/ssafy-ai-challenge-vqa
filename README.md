@@ -4,14 +4,34 @@ SSAFY 16기 AI 챌린지 이미지 기반 질의응답(VQA) 개인전 **최종 1
 
 - 작성자: 김기현 ([kimkihyun1](https://github.com/kimkihyun1))
 - 대회: [SSAFY 16-1 AI Challenge](https://www.kaggle.com/competitions/ssafy-16-1-ai)
-- 최고 제출 점수: **0.95270**
-- 기본 TTA4 제출 점수: **0.95072**
+- Public 리더보드: **1위 · 0.95270**
+- Private 최종 리더보드: **1위 · 0.95703**
+- 기본 TTA4 Public 제출 점수: **0.95072**
 
-순위와 제출 점수는 참가자의 대회 기록 기준입니다. Public/Private 구분 및 평가 지표 명칭은 이 저장소에서 별도로 확정하지 않았습니다. 점수 차이는 **+0.00198**이며, 재실행 성능을 보장하는 수치는 아닙니다.
+Public 점수는 기본 TTA4의 **0.95072 → BASEOFF_BALANCED의 0.95270 (+0.00198)**으로 개선했습니다. 대회 종료 후 Private 리더보드에서도 **0.95703으로 최종 1위**를 기록했습니다.
+
+## 리더보드 및 1위 증빙
+
+참가명: **대전_5반_김기현**. 아래는 실제 Kaggle 리더보드 캡처입니다.
+
+| 구분 | 순위 | 점수 | 평가 데이터 |
+| --- | --- | --- | --- |
+| Public | **1위** | **0.95270** | 테스트 데이터 약 50% |
+| Private (최종 순위) | **1위** | **0.95703** | 나머지 테스트 데이터 약 50% |
+
+### Public 리더보드
+
+![Public 리더보드 — 대전_5반_김기현, 1위, 0.95270](assets/leaderboard-public.png)
+
+### Private 최종 리더보드
+
+![Private 최종 리더보드 — 대전_5반_김기현, 1위, 0.95703](assets/leaderboard-private.png)
+
+Private 캡처에는 대회가 종료되었으며 해당 리더보드가 최종 순위를 반영한다는 안내가 표시되어 있습니다. Public과 Private은 서로 다른 평가 데이터에 대한 점수이므로 두 점수의 차이를 동일 데이터에서의 성능 개선량으로 해석하지 않습니다.
 
 ## 포함된 노트북
 
-| 노트북 | 역할 | 확인된 제출 점수 |
+| 노트북 | 역할 | Public 제출 점수 |
 | --- | --- | --- |
 | [A100_FULL5073_TTA4_FINAL](notebooks/vqa_qwen35_27b_A100_FULL5073_TTA4_FINAL.ipynb) | 전체 5,073개 학습 데이터로 LoRA 학습 및 TTA4 추론 | 0.95072 |
 | [LASTMILE_BASEOFF_MULTICROP_FINAL](notebooks/vqa_qwen35_27b_LASTMILE_BASEOFF_MULTICROP_FINAL.ipynb) | 기존 캐시 복원, LoRA OFF 추론, 선택적 확률 결합 및 추가 실험 | BASEOFF_BALANCED: **0.95270** |
@@ -64,7 +84,7 @@ Last-mile 노트북은 기본 TTA4 결과에서 불확실한 1,000문항을 선�
 
 ## 제출 결과
 
-| 생성 노트북 | 제출 파일 | 점수 |
+| 생성 노트북 | 제출 파일 | Public 점수 |
 | --- | --- | --- |
 | A100_FULL5073_TTA4_FINAL | `submission_qwen35_27b_full5073_bf16_v1024_e1_TTA4.csv` | 0.95072 |
 | LASTMILE_BASEOFF_MULTICROP_FINAL | `submission_qwen35_27b_LASTMILE_BASEOFF_BALANCED.csv` | **0.95270** |

@@ -4,6 +4,7 @@ SSAFY 16기 AI 챌린지 이미지 기반 질의응답(VQA) 개인전 **최종 1
 
 - 작성자: 김기현 ([kimkihyun1](https://github.com/kimkihyun1))
 - 대회: [SSAFY 16-1 AI Challenge](https://www.kaggle.com/competitions/ssafy-16-1-ai)
+- 기간 : 26/08/28 ~ 26/08/31
 - Public 리더보드: **1위 · 0.95270**
 - Private 최종 리더보드: **1위 · 0.95703**
 - 기본 TTA4 Public 제출 점수: **0.95072**
